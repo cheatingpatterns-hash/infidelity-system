@@ -33,33 +33,63 @@ export default function ResultsPage() {
   Deterministic behavioral analysis based on communication patterns and timeline shifts.
 </p>
 
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-        {/* Suspicion */}
-        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl shadow-lg">
-          <h2 className="mb-4 text-xl">Suspicion Score</h2>
-          <p className={`text-6xl font-bold ${severityColor}`}>
-            {data.suspicion}%
-          </p>
-        </div>
 
-        {/* Gaslight */}
-        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl shadow-lg">
-          <h2 className="mb-4 text-xl">Gaslight Indicators</h2>
-          <p className="text-5xl">{data.gaslight}</p>
-        </div>
+       {/* Suspicion */}
+<div className="bg-white/5 border border-white/10 p-4 rounded-2xl shadow-lg flex flex-col h-[160px]">
+  <h2 className="text-sm opacity-80 h-[40px] flex items-center justify-center text-center">
+    Suspicion Score
+  </h2>
 
-        {/* Patterns */}
-        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl shadow-lg">
-          <h2 className="mb-4 text-xl">Behavioral Patterns Detected</h2>
-          <p className="text-5xl">{data.patterns}</p>
-        </div>
+  <div className="flex-1 flex items-center justify-center">
+    <p className={`font-bold leading-none ${severityColor} text-[clamp(2rem,8vw,3rem)]`}>
+      {data.suspicion}%
+    </p>
+  </div>
+</div>
 
-        {/* Shift */}
-        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl shadow-lg">
-          <h2 className="mb-4 text-xl">Behavioral Shift</h2>
-          <p className="text-5xl">{data.shift}%</p>
-        </div>
+{/* Gaslight */}
+<div className="bg-white/5 border border-white/10 p-4 rounded-2xl shadow-lg flex flex-col h-[160px]">
+  <h2 className="text-sm opacity-80 h-[40px] flex items-center justify-center text-center">
+    Gaslight Indicators
+  </h2>
+
+  <div className="flex-1 flex items-center justify-center">
+    <p className="font-bold leading-none text-[clamp(2rem,8vw,3rem)]">
+      {data.gaslight}
+    </p>
+  </div>
+</div>
+
+{/* Patterns */}
+<div className="bg-white/5 border border-white/10 p-4 rounded-2xl shadow-lg flex flex-col h-[160px]">
+  <h2 className="text-sm opacity-80 h-[40px] flex items-center justify-center text-center">
+    Behavioral Patterns
+  </h2>
+
+  <div className="flex-1 flex items-center justify-center">
+    <p className="font-bold leading-none text-[clamp(2rem,8vw,3rem)]">
+      {data.patterns}
+    </p>
+  </div>
+</div>
+
+{/* Shift */}
+<div className="bg-white/5 border border-white/10 p-4 rounded-2xl shadow-lg flex flex-col h-[160px]">
+  <h2 className="text-sm opacity-80 h-[40px] flex items-center justify-center text-center">
+    Behavioral Shift
+  </h2>
+
+
+  <div className="flex-1 flex items-center justify-center">
+    <p className="font-bold leading-none text-[clamp(2rem,8vw,3rem)]">
+      {data.shift}%
+    </p>
+  </div>
+</div>
+
+
 
       </div>
 
